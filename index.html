@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-book</title>
+    <link rel="icon" href="/assets/iconanita.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="/assets/iconanita.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .text-justify {
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-100">
+    <header class="bg-white shadow">
+      <nav class="bg-white shadow-md fixed top-0 w-full z-10">
+        <div
+          class="max-w-screen-lg mx-auto px-4 py-2 flex items-center justify-between"
+        >
+          <a href="#" class="text-xl font-bold">E-book.</a>
+          <button
+            type="button"
+            class="md:hidden block text-gray-700 focus:outline-none"
+            id="navbarToggle"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+          <div class="hidden md:flex space-x-4" id="navbarNav">
+            <a href="#home" class="text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#about" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#toc" class="text-gray-700 hover:text-gray-900"
+              >List of Content</a
+            >
+            <a href="#book" class="text-gray-700 hover:text-gray-900">Book</a>
+            <a href="#contact" class="text-gray-700 hover:text-gray-900"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <div class="max-w-screen-lg mx-auto px-4 my-6">
+      <img
+        src="./assets/banner.png"
+        alt="Banner"
+        class="w-full rounded-lg shadow-lg"
+      />
+    </div>
+
+    <!-- Button Section -->
+    <div
+      class="max-w-screen-lg mx-auto px-4 flex flex-col items-center my-6 space-y-4"
+    >
+      <button
+        id="btnBaca"
+        class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600"
+      >
+        Baca e-book ini
+      </button>
+      <a
+        href="./assets/e-book/ebook.pdf"
+        download="e-book-siapkah-anda-untuk-petualangan-laktasi.pdf"
+        class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600"
+      >
+        Download e-book ini
+      </a>
+    </div>
+
+    <main class="max-w-screen-lg mx-auto px-4">
+      <section id="home" class="my-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Home</h2>
+        <p class="text-gray-700 text-justify">
+          E-book ini merupakan panduan yang komprehensif tentang laktasi,
+          menyediakan informasi tentang fisiologi laktasi, manfaat ASI, IMD
+          (Inisiasi Menyusui Dini), proses pengeluaran ASI, perbedaan antara ASI
+          dan susu formula, teknik menyusui dan perlekatan, serta faktor yang
+          meningkatkan produksi ASI. Dengan konten yang terstruktur dan mudah
+          dipahami, e-book ini bertujuan untuk memberikan dukungan dan
+          pengetahuan yang dibutuhkan oleh ibu menyusui.
+        </p>
+        <img
+          src="./assets/home.jpeg"
+          alt="Home Photo"
+          class="w-full rounded-lg shadow-lg mt-4"
+        />
+      </section>
+
+      <section id="about" class="my-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">About</h2>
+        <img
+          src="./assets/about.png"
+          alt="Anita"
+          class="w-40 h-40 rounded-full mx-auto mb-4"
+        />
+        <p class="text-gray-700 text-justify">
+          Penulis e-book ini adalah Anita, Mahasiswi Kebidanan lulusan Poltekkes
+          Kemenkes Tasikmalaya tahun 2024 yang berdedikasi untuk mendukung
+          ibu-ibu dalam perjalanan mereka dalam menyusui. E-book ini juga berisi
+          kontribusi dari beberapa penulis lain yang berpengalaman di bidangnya.
+          Melalui e-book ini, Anita berbagi pengetahuan dan pengalaman untuk
+          membantu pembaca memahami proses menyusui dan memberikan dukungan yang
+          dibutuhkan.
+        </p>
+      </section>
+
+      <section id="toc" class="my-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">
+          List of Content
+        </h2>
+        <ul class="list-disc pl-6 text-gray-700">
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#fisiologi-laktasi"
+              class="text-blue-500 hover:underline"
+              >Fisiologi Laktasi</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#manfaat-asi"
+              class="text-blue-500 hover:underline"
+              >Manfaat ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#imd"
+              class="text-blue-500 hover:underline"
+              >IMD</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#proses-pengeluaran-asi"
+              class="text-blue-500 hover:underline"
+              >Proses Pengeluaran ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#perbedaan-asi-dan-susu-formula"
+              class="text-blue-500 hover:underline"
+              >Perbedaan ASI dan Susu Formula</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#teknik-menyusui-dan-perlekatan"
+              class="text-blue-500 hover:underline"
+              >Teknik Menyusui dan Perlekatan</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#posisi-menyusui"
+              class="text-blue-500 hover:underline"
+              >Posisi Menyusui</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#menyusui-bagi-ibu-yang-bekerja"
+              class="text-blue-500 hover:underline"
+              >Menyusui Bagi Ibu yang Bekerja</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#pijatan-untuk-memperlancar-asi"
+              class="text-blue-500 hover:underline"
+              >Pijatan Untuk memperlancar ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#tanda-bayi-lapar"
+              class="text-blue-500 hover:underline"
+              >Tanda Bayi Lapar</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#menyendawakan-bayi-setelah-diberikan-asi"
+              class="text-blue-500 hover:underline"
+              >Menyendawakan Bayi Setelah Diberikan ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#faktor-yang-dapat-meningkatkan-produksi-asi"
+              class="text-blue-500 hover:underline"
+              >Faktor yang dapat meningkatkan Produksi ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#makanan-yang-dapat-meningkatkan-produksi-asi"
+              class="text-blue-500 hover:underline"
+              >Makanan yang Dapat Meningkatkan Produksi ASI</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#dukungan-pada-ibu-menyusui"
+              class="text-blue-500 hover:underline"
+              >Dukungan Pada Ibu Menyusui</a
+            >
+          </li>
+          <li>
+            <a
+              id="linkScrollSmooth"
+              href="#daftar-pustaka"
+              class="text-blue-500 hover:underline"
+              >Daftar Pustaka</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section id="book" class="my-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Book</h2>
+        <div id="ebookContent" class="grid grid-cols-1 gap-4">
+          <img
+            src="assets/e-book/ebook_1.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 1"
+          />
+          <img
+            src="assets/e-book/ebook_2.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 2"
+          />
+          <img
+            id="fisiologi-laktasi"
+            src="assets/e-book/ebook_3.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 3"
+          />
+          <img
+            src="assets/e-book/ebook_4.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 4"
+          />
+          <img
+            src="assets/e-book/ebook_5.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 5"
+          />
+          <img
+            src="assets/e-book/ebook_6.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 6"
+          />
+          <img
+            id="manfaat-asi"
+            src="assets/e-book/ebook_7.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 7"
+          />
+          <img
+            src="assets/e-book/ebook_8.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 8"
+          />
+          <img
+            src="assets/e-book/ebook_9.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 9"
+          />
+          <img
+            src="assets/e-book/ebook_10.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 10"
+          />
+          <img
+            src="assets/e-book/ebook_11.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 11"
+          />
+          <img
+            id="imd"
+            src="assets/e-book/ebook_12.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 12"
+          />
+          <img
+            src="assets/e-book/ebook_13.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 13"
+          />
+          <img
+            src="assets/e-book/ebook_14.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 14"
+          />
+          <img
+            src="assets/e-book/ebook_15.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 15"
+          />
+          <img
+            id="proses-pengeluaran-asi"
+            src="assets/e-book/ebook_16.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 16"
+          />
+          <img
+            src="assets/e-book/ebook_17.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 17"
+          />
+          <img
+            src="assets/e-book/ebook_18.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 18"
+          />
+          <img
+            src="assets/e-book/ebook_19.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 19"
+          />
+          <img
+            src="assets/e-book/ebook_20.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 20"
+          />
+          <img
+            id="perbedaan-asi-dan-susu-formula"
+            src="assets/e-book/ebook_21.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 21"
+          />
+          <img
+            src="assets/e-book/ebook_22.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 22"
+          />
+          <img
+            id="teknik-menyusui-dan-perlekatan"
+            src="assets/e-book/ebook_23.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 23"
+          />
+          <img
+            src="assets/e-book/ebook_24.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 24"
+          />
+          <img
+            src="assets/e-book/ebook_25.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 25"
+          />
+          <img
+            src="assets/e-book/ebook_26.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 26"
+          />
+          <img
+            src="assets/e-book/ebook_27.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 27"
+          />
+          <img
+            src="assets/e-book/ebook_28.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 28"
+          />
+          <img
+            src="assets/e-book/ebook_29.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 29"
+          />
+          <img
+            id="posisi-menyusui"
+            src="assets/e-book/ebook_30.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 30"
+          />
+          <img
+            src="assets/e-book/ebook_31.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 31"
+          />
+          <img
+            src="assets/e-book/ebook_32.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 32"
+          />
+          <img
+            src="assets/e-book/ebook_33.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 33"
+          />
+          <img
+            src="assets/e-book/ebook_34.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 34"
+          />
+          <img
+            src="assets/e-book/ebook_35.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 35"
+          />
+          <img
+            id="menyusui-bagi-ibu-yang-bekerja"
+            src="assets/e-book/ebook_36.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 36"
+          />
+          <img
+            src="assets/e-book/ebook_37.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 37"
+          />
+          <img
+            id="pijatan-untuk-memperlancar-asi"
+            src="assets/e-book/ebook_38.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 38"
+          />
+          <img
+            src="assets/e-book/ebook_39.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 39"
+          />
+          <img
+            src="assets/e-book/ebook_40.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 40"
+          />
+          <img
+            src="assets/e-book/ebook_41.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 41"
+          />
+          <img
+            src="assets/e-book/ebook_42.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 42"
+          />
+          <img
+            src="assets/e-book/ebook_43.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 43"
+          />
+          <img
+            src="assets/e-book/ebook_44.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 44"
+          />
+          <img
+            src="assets/e-book/ebook_45.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 45"
+          />
+          <img
+            src="assets/e-book/ebook_46.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 46"
+          />
+          <img
+            src="assets/e-book/ebook_47.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 47"
+          />
+          <img
+            id="tanda-bayi-lapar"
+            src="assets/e-book/ebook_48.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 48"
+          />
+          <img
+            src="assets/e-book/ebook_49.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 49"
+          />
+          <img
+            id="menyendawakan-bayi-setelah-diberikan-asi"
+            src="assets/e-book/ebook_50.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 50"
+          />
+          <img
+            src="assets/e-book/ebook_51.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 51"
+          />
+          <img
+            src="assets/e-book/ebook_52.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 52"
+          />
+          <img
+            src="assets/e-book/ebook_53.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 53"
+          />
+          <img
+            id="faktor-yang-dapat-meningkatkan-produksi-asi"
+            src="assets/e-book/ebook_54.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 54"
+          />
+          <img
+            src="assets/e-book/ebook_55.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 55"
+          />
+          <img
+            src="assets/e-book/ebook_56.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 56"
+          />
+          <img
+            src="assets/e-book/ebook_57.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 57"
+          />
+          <img
+            src="assets/e-book/ebook_58.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 58"
+          />
+          <img
+            src="assets/e-book/ebook_59.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 59"
+          />
+          <img
+            id="makanan-yang-dapat-meningkatkan-produksi-asi"
+            src="assets/e-book/ebook_60.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 60"
+          />
+          <img
+            src="assets/e-book/ebook_61.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 61"
+          />
+          <img
+            src="assets/e-book/ebook_62.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 62"
+          />
+          <img
+            src="assets/e-book/ebook_63.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 63"
+          />
+          <img
+            src="assets/e-book/ebook_64.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 64"
+          />
+          <img
+            src="assets/e-book/ebook_65.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 65"
+          />
+          <img
+            src="assets/e-book/ebook_66.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 66"
+          />
+          <img
+            src="assets/e-book/ebook_67.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 67"
+          />
+          <img
+            id="dukungan-pada-ibu-menyusui"
+            src="assets/e-book/ebook_68.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 68"
+          />
+          <img
+            src="assets/e-book/ebook_69.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 69"
+          />
+          <img
+            src="assets/e-book/ebook_70.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 70"
+          />
+          <img
+            src="assets/e-book/ebook_71.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 71"
+          />
+          <img
+            src="assets/e-book/ebook_72.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 72"
+          />
+          <img
+            id="daftar-pustaka"
+            src="assets/e-book/ebook_73.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 73"
+          />
+          <img
+            src="assets/e-book/ebook_74.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 74"
+          />
+          <img
+            src="assets/e-book/ebook_75.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 75"
+          />
+          <img
+            src="assets/e-book/ebook_76.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 76"
+          />
+          <img
+            src="assets/e-book/ebook_77.jpg"
+            class="rounded-lg shadow-lg max-w-full h-auto"
+            alt="E-Book 77"
+          />
+        </div>
+      </section>
+
+      <section id="contact" class="my-8">
+        <h2 class="text-3xl font-semibold text-gray-800 mb-4">Contact</h2>
+        <p class="text-gray-700">
+          Jika Anda memiliki pertanyaan, silakan hubungi Anita di
+          <a
+            href="mailto:anitasitikhadijahalbarra@gmail.com"
+            class="text-blue-500 hover:underline"
+            >anitasitikhadijahalbarra@gmail.com</a
+          >.
+        </p>
+      </section>
+    </main>
+
+    <footer class="bg-white shadow mt-8 py-4">
+      <div class="max-w-screen-lg mx-auto px-4 text-center text-gray-700">
+        <p>
+          &copy; <span id="year"></span> Website ini dibuat oleh Anita,
+          mahasiswa Poltekkes Kemenkes Tasikmalaya, Prodi D3 Kebidanan.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document
+        .getElementById("navbarToggle")
+        .addEventListener("click", function () {
+          var nav = document.getElementById("navbarNav");
+          if (nav.classList.contains("hidden")) {
+            nav.classList.remove("hidden");
+          } else {
+            nav.classList.add("hidden");
+          }
+        });
+      const btnBaca = document.getElementById("btnBaca");
+      const bookSection = document.getElementById("book");
+
+      btnBaca.addEventListener("click", () => {
+        bookSection.scrollIntoView({ behavior: "smooth" });
+      });
+
+      const navbarLinks = document.querySelectorAll("#navbarNav a");
+
+      navbarLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault(); // Mencegah link bawaan browser berfungsi
+
+          const targetId = link.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      const linksScrollSmooth = document.querySelectorAll(
+        '[id="linkScrollSmooth"]'
+      );
+
+      linksScrollSmooth.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const targetId = link.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
